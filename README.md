@@ -27,19 +27,11 @@ ladies and gentlemen, I present you AutoProxy2Privoxy!
 How to Build
 ------------
 
-AutoProxy2Privoxy is a BASH script and needs not be built. This section talks
-about how to build the Privoxy forward rules from an AutoProxy ruleset.
+The following example assumes a Linux environment. 
+* Open `start.sh` with your editor,modeify `PROXY_ADDR` and `PROXY_TYPE`.
+* run `bash start.sh` and wait a minute.
 
-The following example assumes a Linux environment. Also the famous gfwlist is
-used as the autoproxy ruleset input in the example below.
-
-    gfwlist=https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
-    wget -qO- "${gfwlist}" | base64 -d > gfwlist.txt
-    export PROXY_ADDR=127.0.0.1:7127 PROXY_TYPE=SOCKS5
-    chmod +x autoproxy2privoxy
-    ./autoproxy2privoxy gfwlist.txt > gfw.action
-
-Behold, this last command runs for a while.
+For Windows user, use `gfw.action`directly.
 
 How to Use
 ----------
